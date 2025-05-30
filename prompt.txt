@@ -1,0 +1,17 @@
+rules,don't deal with any file unless it has extension .ex4, .ex5, .zip , .rar
+
+don't touch any other folder in the current working directory but deal with the sub-folders named uni , dup,(create all this folders at start of pyhton robot if they not exist)
+
+
+here is rules
+make python robot that follows above orders and does the below too
+
+rule_1 is this : 
+	- the python checks all files with extension .ex4 and .ex5 , in current folder (all files sorted by from A to Z), for all files , let the python see all files with the same size and name (for name consider the part of name from start up until the opening bracket which "(" and ugnoring the space that comes before the opening bracket, to mean 3 files if one is name random_file.ex4 and another is random_file (1234).ex4 and another is random_file (2) (4).ex4 this 3 files consider them as they have same name) and same file extension, consider them as a group
+
+rule_2 is : 
+	- for each group, immediately cut all its member from the current folder and paste them to sub-folder dup incase there exists any item (inside sub-folder uni) that can be considered as belong to this same current group we are dealing with, if there exists no item in uni sub-folder that can be classified as member of the current group, then cut only the first item of this group and paste it into uni then the rest into dup
+
+after doing rule_1 and rule_2 for files with extension .ex4 and .ex5 , now in current folder there should be no file with extension .ex4 nor .ex5 , to mean all files are now either in uni or dup, i want that as we are done with rule_1 and rule_2 print that you are done sorting all .ex4 and .ex5, also print how many sent to uni folder and how many sent to dup folder  then pause for 5 seconds, then do the below
+
+follow rule_1 and rule_2 but for .zip and .rar files, but here for each group, don't consider the file size, only name and extension, and if according to name rules in rule_1, if items are classified as a group and have same extension, then follow rule_2
